@@ -9,14 +9,14 @@ export default function ForecastTable({ forecast }) {
     <div className="table-wrap">
       <div className="forecast-header forecast-grid">
         <span>Date</span>
-        <span>Temperature</span>
+        <span>Low</span>
+        <span>High</span>
         <span>Moon Rise</span>
-        <span>Moon Set</span>
-        <span>Moon Phase</span>
+        <span>Details</span>
       </div>
 
-      {forecast.map((day, index) => (
-        <ForecastRow key={`${day.valid_date}-${index}`} day={day} />
+      {forecast.map((day) => (
+        <ForecastRow key={day.valid_date} day={day} />
       ))}
     </div>
   );

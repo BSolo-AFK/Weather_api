@@ -5,6 +5,8 @@ export default function FilterBar({
   setSelectedDate,
   moonPhaseLimit,
   setMoonPhaseLimit,
+  showCharts,
+  setShowCharts,
 }) {
   const cities = [
     "New York",
@@ -52,6 +54,13 @@ export default function FilterBar({
         />
         <span>{moonPhaseLimit}</span>
       </label>
+
+      <button
+        className="toggle-button"
+        onClick={() => setShowCharts(!showCharts)}
+      >
+        {showCharts ? "Hide Charts" : "Show Charts"}
+      </button>
     </div>
   );
 }
